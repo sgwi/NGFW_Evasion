@@ -70,7 +70,8 @@ def SMTP(conn):
 def openServer(port):
     print "open Collusion Server......port: "+str(port)+"\n"
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    s.bind(('', port))
+    #s.bind(('', port))
+    s.bind(('', 1234))
     s.listen(1)
     conn, addr = s.accept()
     print 'Connected by', addr,"\n"
